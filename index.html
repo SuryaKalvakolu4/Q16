@@ -26,14 +26,14 @@
     </style>
 </head>
 <body>
-    <h1>SerialN 11</h1>
+    <h1>Dehumidifier</h1>
     <div id="question"></div>
     <div id="options"></div>
-    <button onclick="nextQuestion()">SUBMIT</button>
+    <button onclick="nextQuestion()">Submit</button>
     <script>
         // Function to clear the quiz score from local storage
 function clearQuizScore() {
-    localStorage.removeItem("SerialN_11_Score");
+    localStorage.removeItem("Dehumidifier_2");
 }
 
 // Function to clear local storage when the tab is closed or refreshed
@@ -49,13 +49,13 @@ window.addEventListener('beforeunload', function() {
         const quiz = [
             {
                 question: "What is the purpose of disinfecting water by adding chlorine?",
-                options: ["Prevention of recontamination", "Deinfection", "Emulsion"],
+                options: ["Prevention of Recontamination", "Deinfection", "Emulsion"],
                 answer: 1
             }
         ];
 
         let currentQuestion = 0;
-        let SerialN_11_Score = 0;
+        let Dehumidifier_2 = 0;
 
         // Function to display current question
         function displayQuestion() {
@@ -99,9 +99,9 @@ window.addEventListener('beforeunload', function() {
     }
 
     if (!isAnswered || selectedOption !== quiz[currentQuestion].answer) {
-        SerialN_11_Score = 0; // Assign zero score if question is not attempted or answered incorrectly
+        Dehumidifier_2 = 0; // Assign zero score if question is not attempted or answered incorrectly
     } else {
-        SerialN_11_Score++; // Increment score for correct answer
+        Dehumidifier_2++; // Increment score for correct answer
     }
 }
 
@@ -112,8 +112,8 @@ window.addEventListener('beforeunload', function() {
 
             if (currentQuestion === quiz.length) {
                 // All questions answered, store score in local storage
-                localStorage.setItem("SerialN_11_Score", SerialN_11_Score);
-                alert("Quiz completed. Your score is " + SerialN_11_Score);
+                localStorage.setItem("Dehumidifier_2", Dehumidifier_2);
+                alert("Quiz completed. Your score is " + Dehumidifier_2);
             } else {
                 displayQuestion();
             }
